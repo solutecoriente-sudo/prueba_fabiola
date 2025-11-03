@@ -1,0 +1,201 @@
+```json
+{
+  "repositorio": {
+    "nombre": "RRED María Inmaculada - Español",
+    "versionUI": "1.0",
+    "tema": {
+      "primario": "#0b5d8f",
+      "secundario": "#ff8a00",
+      "fondo": "#ffffff",
+      "texto": "#122033"
+    },
+    "logo": {
+      "alt": "Institución Educativa María Inmaculada",
+      "ubicacion": "/assets/logo-maria-inmaculada.svg"
+    }
+  },
+  "interfaz": {
+    "navbar": [
+      { "id": "inicio", "label": "Inicio", "ruta": "/inicio" },
+      { "id": "recursos", "label": "Recursos", "ruta": "/recursos" },
+      { "id": "favoritos", "label": "Mis Favoritos", "ruta": "/favoritos" },
+      { "id": "planes", "label": "Planes Lectores", "ruta": "/planes-lectores" },
+      { "id": "cargar", "label": "Cargar Recurso", "ruta": "/cargar", "visiblePara": ["Docente","Administrativo","Administrador"] }
+    ],
+    "buscador": {
+      "placeholder": "Buscar por título, autor o palabra clave...",
+      "soportaAutocompletar": true,
+      "filtros": {
+        "nivel": ["Primaria", "Secundaria"],
+        "categoria": ["Video", "Infografía", "Actividad imprimible", "Juego", "Plan lector"],
+        "idioma": ["Español", "Inglés"],
+        "orden": ["Más recientes", "Más vistos", "Mejor valorados"]
+      }
+    },
+    "gridRecursos": {
+      "columnas": 4,
+      "cards": {
+        "mostrarMiniatura": true,
+        "mostrarMetadatos": ["titulo","autor","descripcionBreve","idioma","categoria"],
+        "acciones": ["Vista previa","Descargar","Agregar a favoritos","Agregar comentario","Compartir"]
+      }
+    },
+    "footer": {
+      "texto": "© Institución Educativa María Inmaculada",
+      "links": [
+        { "label": "Política de privacidad", "ruta": "/privacidad" },
+        { "label": "Contacto", "ruta": "/contacto" }
+      ]
+    }
+  },
+  "recursos": [
+    {
+      "id": "rec-001",
+      "tipo": "Video",
+      "titulo": "El cuento",
+      "autor": "María Pérez",
+      "idioma": "Español",
+      "palabrasClave": ["cuento","narrativa","estructura"],
+      "descripcionBreve": "Video que explica cómo se compone un cuento: inicio, nudo y desenlace.",
+      "miniatura": "/media/miniaturas/el_cuento.jpg",
+      "archivoUrl": "/media/videos/el_cuento.mp4",
+      "nivelEducativo": "Primaria",
+      "fechaPublicacion": "2025-10-15",
+      "comentarios": [],
+      "visibilidad": "publico",
+      "estadisticas": { "vistas": 128, "descargas": 32, "valoracionPromedio": 4.6 }
+    },
+    {
+      "id": "rec-002",
+      "tipo": "Infografía",
+      "titulo": "Los acentos",
+      "autor": "Luis González",
+      "idioma": "Español",
+      "palabrasClave": ["acentos","tilde","ortografía"],
+      "descripcionBreve": "Infografía sobre los tipos de acento en español: agudo, grave y esdrújulo.",
+      "miniatura": "/media/miniaturas/los_acentos.jpg",
+      "archivoUrl": "/media/infografias/los_acentos.pdf",
+      "nivelEducativo": "Primaria",
+      "fechaPublicacion": "2025-09-20",
+      "comentarios": [
+        { "usuario": "doc_alarcon", "rol": "Docente", "texto": "Excelente para trabajar en clase.", "fecha": "2025-09-21T10:05:00" }
+      ],
+      "visibilidad": "publico",
+      "estadisticas": { "vistas": 210, "descargas": 98, "valoracionPromedio": 4.8 }
+    },
+    {
+      "id": "rec-003",
+      "tipo": "Actividad imprimible",
+      "titulo": "Repaso de ortografía",
+      "autor": "Laura Sanchez",
+      "idioma": "Español",
+      "palabrasClave": ["ortografía","actividad","imprimible"],
+      "descripcionBreve": "Actividad imprimible para practicar ortografía con ejercicios de completar palabras.",
+      "miniatura": "/media/miniaturas/repaso_ortografia.jpg",
+      "archivoUrl": "/media/actividades/repaso_ortografia.pdf",
+      "nivelEducativo": "Primaria",
+      "fechaPublicacion": "2025-08-12",
+      "comentarios": [],
+      "visibilidad": "publico",
+      "estadisticas": { "vistas": 87, "descargas": 64, "valoracionPromedio": 4.3 }
+    },
+    {
+      "id": "rec-004",
+      "tipo": "Juego",
+      "titulo": "Juego de palabras",
+      "autor": "Ana Rodriguez",
+      "idioma": "Español",
+      "palabrasClave": ["juego","vocabulario","interactivo"],
+      "descripcionBreve": "Juego interactivo para aprender y practicar vocabulario en contexto.",
+      "miniatura": "/media/miniaturas/juego_palabras.jpg",
+      "archivoUrl": "/apps/juegos/juego_palabras/index.html",
+      "nivelEducativo": "Primaria",
+      "fechaPublicacion": "2025-07-30",
+      "comentarios": [
+        { "usuario": "est_juan", "rol": "Alumno", "texto": "Muy divertido y útil.", "fecha": "2025-08-01T16:30:00" }
+      ],
+      "visibilidad": "publico",
+      "estadisticas": { "vistas": 342, "descargas": 0, "valoracionPromedio": 4.7 }
+    }
+  ],
+  "metadatosNecesariosPorRecurso": [
+    "autor",
+    "titulo",
+    "idioma",
+    "palabrasClave",
+    "descripcionBreve",
+    "tipoDeRecurso",
+    "nivelEducativo",
+    "archivoUrl",
+    "miniatura",
+    "fechaPublicacion"
+  ],
+  "rolesYSesiones": {
+    "rolesDisponibles": [
+      "Administrador",
+      "Administrativo",
+      "Docente",
+      "Padre de familia",
+      "Alumno",
+      "Invitado"
+    ],
+    "permisos": {
+      "Administrador": ["gestionarUsuarios","gestionarRoles","gestionarRecursos","moderarComentarios","verEstadisticas","configuracionGlobal"],
+      "Administrativo": ["aprobarRecursos","moderarComentarios","verEstadisticasParciales","exportarReportes"],
+      "Docente": ["subirRecurso","editarPropios","comentar","verEstadisticasPropias","crearPlanesLectores"],
+      "Padre de familia": ["verRecursos","comentar","guardarFavoritos"],
+      "Alumno": ["verRecursos","comentar","guardarFavoritos","descargarSiPermitido"],
+      "Invitado": ["verRecursosPublicos"]
+    },
+    "panelAdministracionUsuarios": {
+      "funciones": [
+        "crearUsuario",
+        "editarUsuario",
+        "asignarRol",
+        "resetearContrasena",
+        "desactivarCuenta",
+        "verActividadUsuario"
+      ],
+      "filtros": ["porRol","porEstado","porUltimoAcceso"],
+      "auditoria": true
+    }
+  },
+  "moderacionYComentarios": {
+    "comentariosActivadosPorDefecto": true,
+    "moderacion": {
+      "modo": "mixto",
+      "descripcion": "Comentarios visibles inmediatamente pero marcados para revisión automática por filtros de contenido; administradores pueden eliminar o bloquear.",
+      "accionesModerador": ["eliminarComentario","ocultarComentario","bloquearUsuario","marcarComoResuelto"]
+    },
+    "formatoComentario": {
+      "campos": ["usuario","rol","texto","fecha","reaccion"],
+      "longitudMaxima": 1000
+    }
+  },
+  "accionesAPI": {
+    "endpoints": {
+      "buscarRecursos": { "metodo": "GET", "ruta": "/api/recursos", "queryParams": ["q","nivel","categoria","idioma","orden","page","limit"] },
+      "detalleRecurso": { "metodo": "GET", "ruta": "/api/recursos/{id}" },
+      "subirRecurso": { "metodo": "POST", "ruta": "/api/recursos", "authRequired": true, "rolesPermitidos": ["Docente","Administrativo","Administrador"] },
+      "comentarRecurso": { "metodo": "POST", "ruta": "/api/recursos/{id}/comentarios", "authRequired": true },
+      "gestionarUsuarios": { "metodo": "POST/PUT/DELETE", "ruta": "/api/usuarios", "authRequired": true, "rolesPermitidos": ["Administrador"] }
+    },
+    "seguridad": {
+      "autenticacion": "JWT",
+      "autorizacion": "RBAC",
+      "protecciones": ["rateLimit","validacionArchivo","escaneoVirusEnSubida"]
+    }
+  },
+  "uxAccesibilidad": {
+    "responsivo": true,
+    "contrasteMinimo": "AA",
+    "modoLectura": true,
+    "soporteLecturaTTS": true,
+    "navegacionPorTeclado": true
+  },
+  "exportacionYBackups": {
+    "exportFormats": ["csv","xlsx","json"],
+    "backup": { "frecuencia": "diaria", "retencionDias": 30, "almacenamiento": "S3" }
+  }
+}
+```
