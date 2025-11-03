@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRRED María Inmaculada - Repositorio Educativo</title>
+
+  <style>
+    :root {
+      --color-primario: #0b5d8f;
+      --color-secundario: #ffa800;
+      --color-fondo: #ffffff;
+      --color-texto: #122033;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    header {
+      background-color: var(--color-primario);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--color-secundario);
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--color-primario);
+    }
+
+    .tarjetas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tarjeta {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--color-secundario);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="assets/logo-maria-inmaculada.svg" alt="Institución Educativa María Inmaculada">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Recursos</a>
+      <a href="#">Favoritos</a>
+      <a href="#">Planes Lectores</a>
+      <a href="#">Cargar</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Repositorio Educativo RRRED María Inmaculada</h1>
+    <p>Explora materiales, recursos y planes diseñados para docentes, estudiantes y personal administrativo.</p>
+
+    <section class="tarjetas">
+      <div class="tarjeta">
+        <h3>📘 Recursos</h3>
+        <p>Accede a materiales educativos organizados por área y nivel.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>⭐ Favoritos</h3>
+        <p>Guarda tus recursos más usados para acceder fácilmente.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>📚 Planes Lectores</h3>
+        <p>Consulta las estrategias lectoras y actividades pedagógicas.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>⬆️ Cargar Recursos</h3>
+        <p>Sube nuevos materiales al repositorio (solo usuarios autorizados).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 RRRED María Inmaculada - Desarrollado por <a href="https://www.solutecoriente.com" target="_blank">Solutec Oriente S.A.S.</a></p>
+  </footer>
+</body>
+</html>
+
